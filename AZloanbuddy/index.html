@@ -1,0 +1,161 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <title>Loan Calculator</title>
+    <script type="text/javascript" src="loan.js"></script>
+    <style>
+      #loading,
+      #loanResult {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark bg-primary">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container">
+        <span class="navbar-brand text-white" href="#">Loan Calculator</span>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 m-auto d-block">
+          <div class="card mb-2">
+            <div class="card-header text-center" id="card">
+              <h4 class="heading display-5 pb-3" id="heading">
+                Loan Calculator
+              </h4>
+            </div>
+            <div class="card-body">
+              <form id="load_form">
+                <div class="input-group mb-2 mr-sm-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">Loan amount</div>
+                  </div>
+                  <input
+                    placeholder="Total Amount of loan"
+                    type="number"
+                    class="form-control"
+                    id="amount"
+                    name="=amount"
+                  />
+                </div>
+
+                <div class="input-group mb-2 mr-sm-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">Rate of Interest</div>
+                  </div>
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">%</div>
+                  </div>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="interest"
+                    name="=interest"
+                  />
+                </div>
+
+                <div class="input-group mb-2 mr-sm-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">@</div>
+                  </div>
+                  <input
+										type="number" step="0.01"
+                    class="form-control"
+                    id="years"
+                    name="=years"
+                    placeholder="Year to repay"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn-secondary btn-sm btn-block"
+                >
+                  Calculate
+                </button>
+              </form>
+            </div>
+          </div>
+          <div id="loading" class="text-center">
+            <button class="btn btn-primary" type="button" disabled>
+              <span
+                class="spinner-grow spinner-grow-sm"
+                role="status"
+                aria-hidden="true"
+              ></span>
+              Loading...
+            </button>
+          </div>
+
+          <div id="loanResult" class="mt-2">
+            <div class="card mb-2">
+              <div class="card-header text-center">
+                <h4>Payment Results</h4>
+              </div>
+              <div class="card-body">
+                <div class="input-group mb-2 mr-sm-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">Monthly payment</div>
+                  </div>
+                  <input
+                    class="form-control"
+                    id="montlyPmnt"
+                    name="montlyPmnt"
+                    disabled
+                  />
+                </div>
+
+                <div class="input-group mb-2 mr-sm-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">Total payment</div>
+                  </div>
+                  <input
+                    class="form-control"
+                    id="totalPmnt"
+                    name="totalPmnt"
+                    disabled
+                  />
+                </div>
+
+                <div class="input-group mb-2 mr-sm-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">Total Interest</div>
+                  </div>
+                  <input
+                    class="form-control"
+                    id="totalInterest"
+                    name="totalInterest"
+                    disabled
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <iframe width="300" height="400"  src='https://webchat.botframework.com/embed/myloan-bot?s=2wQARb3L1b0.uZ_QkNXAKNrWI-7cgNgbJQW5L9iZRh1YZ23SRAg0s4Q'style="
+    margin-left: 80%;
+"></iframe>
+  </body>
+</html>
